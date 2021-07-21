@@ -1,3 +1,10 @@
+<% @prices["DISPLAY"].each do |key, value| %>
+  <%= key %> - <%= value["EUR"]["PRICE"] %><br>
+  24 High: <%= value["EUR"]["HIGHDAY"] %><br>
+  24 Low: <%= value["EUR"]["LOWDAY"] %><br>
+  Market Cap: <%= value["EUR"]["MKTCAP"] %><br>
+  <br>
+<% end %>
 
 <div class="contatiner">
   <div class="row">
