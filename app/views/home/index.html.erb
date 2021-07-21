@@ -1,11 +1,26 @@
-<% @prices["DISPLAY"].each do |key, value| %>
-  <%= key %> - <%= value["EUR"]["PRICE"] %><br>
-  24 High: <%= value["EUR"]["HIGHDAY"] %><br>
-  24 Low: <%= value["EUR"]["LOWDAY"] %><br>
-  Market Cap: <%= value["EUR"]["MKTCAP"] %><br>
-  <br>
-<% end %>
-
+<table class="table table-sm table-striped table-bordered table-hover">
+  <thead class="thead">
+    <tr class="table-dark">
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">24hr High</th>
+      <th scope="col">24hr Low</th>
+      <th scope="col">Market Cap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @prices["DISPLAY"].each do |key, value| %>
+      <tr>
+        <td><%= key %></td>
+        <td><%= value["EUR"]["PRICE"] %></td>
+        <td><%= value["EUR"]["HIGHDAY"]%></td>
+        <td><%= value["EUR"]["LOWDAY"] %></td>
+        <td><%= value["EUR"]["MKTCAP"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
 <div class="contatiner">
   <div class="row">
     <% for x in @news["Data"] %>
