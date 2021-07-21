@@ -1,1 +1,11 @@
 <h1>Prices Page</h1>
+
+<% @quote["DISPLAY"].each do |key, value| %>
+  <div class="jumbotron">
+    <h1 class="display-4"><%= key %></h1>
+    Price: <%= value["EUR"]["PRICE"] %><br>
+    24hr High: <%= value["EUR"]["HIGHDAY"]%><br>
+    24hr Low: <%= value["EUR"]["LOWDAY"] %><br>
+    Market Cap: <%= value["EUR"]["MKTCAP"] %><br>
+  </div>
+<% end %>

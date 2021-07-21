@@ -10,10 +10,10 @@
           <%= link_to "Get Prices", home_prices_path, class: 'nav-link' %>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-secondary" type="submit">Search</button>
-      </form>
+      <%= form_tag home_prices_path, method: 'POST', class: 'd-flex' do %>
+        <%= text_field_tag 'sym', nil, placeholder: 'Enter Crypto Symbol', class: 'form-control me-2' %>
+        <%= submit_tag 'Lookup', class: 'btn btn-secondary' %>
+      <% end %>
     </div>
   </div>
 </nav>

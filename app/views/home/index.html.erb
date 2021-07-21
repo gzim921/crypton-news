@@ -8,17 +8,7 @@
       <th scope="col">Market Cap</th>
     </tr>
   </thead>
-  <tbody>
-    <% @prices["DISPLAY"].each do |key, value| %>
-      <tr>
-        <td><%= key %></td>
-        <td><%= value["EUR"]["PRICE"] %></td>
-        <td><%= value["EUR"]["HIGHDAY"]%></td>
-        <td><%= value["EUR"]["LOWDAY"] %></td>
-        <td><%= value["EUR"]["MKTCAP"] %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  
 </table>
 <br>
 <div class="contatiner">
